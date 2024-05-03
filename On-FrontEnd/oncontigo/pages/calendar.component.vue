@@ -3,25 +3,26 @@ import {onMounted} from "vue";
 import CalendarAppointments from "../components/calendar-appointments.component.vue";
 import CalendarDisplay from "../components/calendar-display.component.vue";
 import {PatientsService} from "../services/patients.service.js";
-const patients={};
+const patients =[];
+
 const fetchPatients=async ()=>{
   try {
     const response = await new PatientsService().getAll();
-    this.patients = response.data;
+    patients.push(...response.data);
     console.log(patients);
   } catch (error) {
-    console.error('Error obteniendo plan de comida:', error);
+    console.error('Error pacientes', error);
   }
 }
 
-onMounted()
+onMounted(fetchPatients);
 </script>
 
 <!--Esta es una page del calendario-->
 <template>
   <section class="calendar-container">
 
-    <calendar-appointments></calendar-appointments>
+    <calendar-appointments :appointments="patients"></calendar-appointments>
 
     <div class="calendar-display">
       <calendar-display></calendar-display>

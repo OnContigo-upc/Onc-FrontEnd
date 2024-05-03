@@ -1,17 +1,27 @@
 <script setup>
-
+import { defineProps } from 'vue';
+const props = defineProps({
+  name: {
+    type: String,
+    required: false
+  },
+  date:{
+    type:String,
+    required:false
+  },
+})
 </script>
 
 <template>
   <div class="card-info">
     <div class="image-container">
-      <img src="../public/vite.svg">
+      <img src="#">
     </div>
     <pv-card class="card-description">
-      <template #title>Paciente</template>
+      <template #title>{{ name }}</template>
       <template #content>
         <p class="m-0">
-          25/05/24
+          {{ date }}
         </p>
       </template>
     </pv-card>
