@@ -1,5 +1,13 @@
 <script setup>
 import CardInfo from "./card-info.component.vue";
+import {defineProps} from "vue";
+const props = defineProps({
+  appointments: {
+    type: Array,
+    required: false
+  },
+
+})
 </script>
 
 <template>
@@ -8,11 +16,8 @@ import CardInfo from "./card-info.component.vue";
       <h1>Calendario</h1>
     </div>
 
-    <div class="cards-container">
-      <card-info></card-info>
-      <card-info></card-info>
-      <card-info></card-info>
-      <card-info></card-info>
+    <div v-for="(patient, index) in appointments" :key="index">
+      <card-info :name="patient.name" :date="patient.nextAppoinment"></card-info>
     </div>
   </div>
 </template>

@@ -4,7 +4,7 @@ const API_BASE_URL = import.meta.env.VITE_BASE_URL;
 
 
 const http = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://localhost:3000/',
     headers: { 'Content-type': 'application/json' }
 });
 
