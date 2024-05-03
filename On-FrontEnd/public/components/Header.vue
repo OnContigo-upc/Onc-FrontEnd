@@ -1,14 +1,19 @@
 <template>
-  <header>
-    <h1>OnContigo</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/acerca">Acerca</a></li>
-      </ul>
-    </nav>
-  </header>
+  <pv-toolbar style="background-color: #FF94B0;">
+      <template #start>
+        <h1>OnContigo</h1>
+      </template>
+      <template #end>
+        <nav>
+          <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/acerca">Acerca</a></li>
+          </ul>
+        </nav>
+      </template>
+  </pv-toolbar>
 </template>
+
 
 <script>
 export default {
@@ -16,25 +21,25 @@ export default {
 }
 </script>
 
-<style scoped>
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background-color: #FF94B0;
-  padding: 10px;
-  margin-bottom: 40px;
-}
+<style>
 
 nav ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 nav ul li {
-  display: inline;
-  margin-right: 1px;
+  margin-right: 20px; /* Espaciado entre elementos de menú */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  margin: 0; /* Elimina cualquier margen predeterminado para ajustar el alineamiento */
 }
 </style>
