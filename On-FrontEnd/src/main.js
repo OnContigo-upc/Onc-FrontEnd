@@ -21,6 +21,7 @@ import Toolbar          from 'primevue/toolbar';
 import DataTable  from "primevue/datatable";
 import Column from 'primevue/column'
 import Row from 'primevue/row'
+import VirtualScroller from "primevue/virtualscroller";
 
 createApp(App)
     .use(PrimeVue, { ripple: true})
@@ -29,6 +30,7 @@ createApp(App)
     .component('pv-select-button',SelectButton)
     .component('pv-sidebar',Sidebar)
     .component('pv-avatar',Avatar)
+    .component('pv-vscroller', VirtualScroller)
     .component('pv-menu',Menu)
     .component('pv-menu-bar',MenuBar)
     .component('pv-toolbar',Toolbar)

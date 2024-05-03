@@ -1,6 +1,8 @@
 <script setup>
 import CardInfo from "./card-info.component.vue";
-import {defineProps, ref} from "vue";
+import {defineProps, ref,computed} from "vue";
+
+
 const cardInfo = ref([]);
 const props = defineProps({
   appointments: {
@@ -8,7 +10,12 @@ const props = defineProps({
     required: false,
     default:[],
   },
+
 })
+const firstFiveAppointments = computed(() => {
+  return props.appointments.slice(0, 4); // Toma los primeros 5 elementos
+});
+
 </script>
 
 <template>
@@ -17,9 +24,9 @@ const props = defineProps({
       <h1>Calendario</h1>
     </div>
 
-    <div  class="cards-container">
-      <template v-for="(patient, index) in appointments" :key="index">
-      <card-info :name="patient.name" :date="patient.nextAppoinment"></card-info>
+    <div class="cards-container">
+      <template v-for="(patient, index) in firstFiveAppointments" :key="index">
+        <card-info :name="patient.name" :date="patient.nextAppoinment"></card-info>
       </template>
     </div>
   </div>
