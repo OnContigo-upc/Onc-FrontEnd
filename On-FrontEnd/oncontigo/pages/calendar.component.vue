@@ -1,15 +1,14 @@
 <script setup>
-import {onMounted} from "vue";
+import {onMounted, ref} from "vue";
 import CalendarAppointments from "../components/calendar-appointments.component.vue";
 import CalendarDisplay from "../components/calendar-display.component.vue";
 import {PatientsService} from "../services/patients.service.js";
-const patients =[];
+const patients = ref([]);
 
 const fetchPatients=async ()=>{
   try {
     const response = await new PatientsService().getAll();
-    patients.push(...response.data);
-    console.log(patients);
+    patients.value.push(...response.data);
   } catch (error) {
     console.error('Error pacientes', error);
   }

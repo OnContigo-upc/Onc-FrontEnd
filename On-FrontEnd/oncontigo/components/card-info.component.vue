@@ -3,11 +3,13 @@ import { defineProps } from 'vue';
 const props = defineProps({
   name: {
     type: String,
-    required: false
+    required: false,
+    default:''
   },
   date:{
     type:String,
-    required:false
+    required:false,
+    default:''
   },
 })
 </script>
