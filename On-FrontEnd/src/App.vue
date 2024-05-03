@@ -9,7 +9,7 @@ export default defineComponent({
 </script>
 
 <template>
-<calendar></calendar>
+    <router-view></router-view>
 </template>
 
 <style >
