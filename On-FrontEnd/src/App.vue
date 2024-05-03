@@ -1,16 +1,15 @@
 <script >
-//importar el component de toolbar
+import {defineComponent} from "vue";
+import Calendar from "../oncontigo/pages/calendar.component.vue";
+
+
+export default defineComponent({
+  components: {Calendar}
+})
 </script>
 
 <template>
-<!--
-<div class="select-none">
-    <toolbar></toolbar>
-    <router-view></router-view>
-  </div>
-
--->
-<h1>HOLA COMO ESTAN</h1>
+<calendar></calendar>
 </template>
 
 <style >

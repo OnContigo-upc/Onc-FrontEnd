@@ -1,5 +1,5 @@
 <script setup>
-import CardInfo from "./card-info.vue";
+import CardInfo from "./card-info.component.vue";
 </script>
 
 <template>
@@ -36,7 +36,7 @@ import CardInfo from "./card-info.vue";
 }
 
 .calendar-title h1{
-  margin: 0px;
+  margin: 0;
   color: #000000;
   font-size: 48px;
 }
