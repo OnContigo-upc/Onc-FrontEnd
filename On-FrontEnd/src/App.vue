@@ -1,15 +1,18 @@
-<script >
-import {defineComponent} from "vue";
-import Calendar from "../oncontigo/pages/calendar.component.vue";
-
-
-export default defineComponent({
-  components: {Calendar}
-})
+<script>
+import HeaderComponent from "../public/components/Header.vue";
+import { onMounted } from "vue";
+export default {
+  name: "App",
+  components: {HeaderComponent},
+};
 </script>
 
 <template>
+  <div class="select-none">
+    <header-component></header-component>
     <router-view></router-view>
+  </div>
+
 </template>
 
 <style >

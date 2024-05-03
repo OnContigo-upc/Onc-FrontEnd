@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
+    "tailwindcss": "^3.4.3",
     "vite": "^4.4.5"
   }
 }
