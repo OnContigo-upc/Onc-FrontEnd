@@ -1,7 +1,20 @@
 <script setup>
+import {onMounted} from "vue";
 import CalendarAppointments from "../components/calendar-appointments.component.vue";
 import CalendarDisplay from "../components/calendar-display.component.vue";
+import {PatientsService} from "../services/patients.service.js";
+const patients={};
+const fetchPatients=async ()=>{
+  try {
+    const response = await new PatientsService().getAll();
+    this.patients = response.data;
+    console.log(patients);
+  } catch (error) {
+    console.error('Error obteniendo plan de comida:', error);
+  }
+}
 
+onMounted()
 </script>
 
 <!--Esta es una page del calendario-->
