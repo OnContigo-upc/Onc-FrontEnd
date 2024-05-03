@@ -37,7 +37,6 @@ const toggleBooked = () => {
 .boton{
   width:130px;
   height:55px;
-  /*background-color: rgba(210, 218, 250, 0.75)*/
   background-color: #4A547F;
   border-radius:0px;
   display:flex;
