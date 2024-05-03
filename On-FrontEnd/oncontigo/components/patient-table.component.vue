@@ -37,7 +37,7 @@ export default {
 
 <template>
   <div>
-    <pv-datatable :value="patients" dataKey="dni">
+    <pv-data-table :value="patients" dataKey="dni">
       <pv-column header="Foto">
         <template #body="slotProps">
           <img :src="slotProps.data.photoUrl" alt="Foto de Paciente" style="width: 40px; height: auto;">
@@ -54,7 +54,7 @@ export default {
           </pv-button>
         </template>
       </pv-column >
-    </pv-datatable>
+    </pv-data-table>
   </div>
 </template>
 
