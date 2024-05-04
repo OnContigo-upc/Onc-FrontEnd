@@ -14,7 +14,7 @@ const router = createRouter({
 
         },
         {
-            path: "/patient-overview/:id",
+            path: "/patient-overview/:idDoctor",
             component: PatientOverview,
         },
         {

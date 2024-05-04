@@ -66,5 +66,17 @@ export default {
 
 body {
   background-color: var(--primary-pink);
+  background-image:url('@/assets/images/bg-login.png') !important;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center top;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9998;
+  left: 0;
+  display: table;
+  transition: opacity 0.3s ease;
 }
 </style>

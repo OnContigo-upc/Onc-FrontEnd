@@ -1,21 +1,36 @@
 <script>
-import {PatientsService} from "../services/patients.service.js";
-import {onMounted, ref} from "vue";
+import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router';  // Importa useRoute
+import { PatientsService } from '../services/patients.service.js';
 
-const patients = ref([]);
+export default {
+  name: 'PatientTableComponent',
+  setup() {
+    const patients = ref([]);
+    const route = useRoute();
+    const fetchPatients = async () => {
+      const idDoctor = route.params.idDoctor;
+      try {
+        const service = new PatientsService();
+        const response = await service.getByIdDoctor(idDoctor);
+        patients.value = response.data;
+      } catch (error) {
+        console.error('Error al cargar pacientes', error);
+      }
+    };
 
-const fetchPatients = async () => {
-  try {
-    const response = await new PatientsService().getByIdDoctor(1); // Filtrar por idDoctor igual a 1
-    patients.value.push(...response.data);
-    console.log(response.data);
-  } catch (error) {
-    console.error('Error pacientes', error);
+    onMounted(fetchPatients);
+
+    return {
+      patients
+    };
+  },
+  methods: {
+    confirm(patient) {
+      alert(`Alarma activada para ${patient.name}`);
+    }
   }
-}
-onMounted(fetchPatients);
-
-
+};
 </script>
 
 <template>
@@ -28,8 +43,8 @@ onMounted(fetchPatients);
       </pv-column>
       <pv-column field="dni" header="DNI"></pv-column>
       <pv-column field="name" header="Nombre completo"></pv-column>
-      <pv-column field="lastAppointment" header="Ult. Cita"></pv-column>
-      <pv-column field="nextAppointment" header="Prox. Cita"></pv-column>
+      <pv-column field="lastAppointmet" header="Ult. Cita"></pv-column>
+      <pv-column field="nextAppoinment" header="Prox. Cita"></pv-column>
       <pv-column  header="Alarma" >
         <template #body="slotProps">
           <pv-button type="button" class="alarm-button"  rounded  @click="confirm(slotProps.data)">
