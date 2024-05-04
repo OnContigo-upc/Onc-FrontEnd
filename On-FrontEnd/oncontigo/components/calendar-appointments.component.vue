@@ -44,10 +44,17 @@ const firstFiveAppointments = computed(() => {
   justify-content:center;
   height:129px;
   background-color: #95A8FF;
+
+  @media (max-width: 768px) {
+    width: 100vw;
+  }
 }
 .cards-container{
   background-color: #4A547F;
   flex-grow: 1;
+  @media (max-width: 768px) {
+    width: 100vw;
+  }
 }
 
 .calendar-title h1{

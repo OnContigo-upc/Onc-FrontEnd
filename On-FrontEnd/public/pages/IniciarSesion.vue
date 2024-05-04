@@ -58,7 +58,7 @@ export default {
 .bg-login{
   background-image:url('@/assets/images/bg-login.png') !important;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center top;
   background-attachment: fixed;
   width: 100%;

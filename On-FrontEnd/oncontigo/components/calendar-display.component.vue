@@ -16,15 +16,15 @@ const handleToggle = (rowIndex, colIndex) => {
     <table class="table-calendar">
 
       <tr>
-        <th class="hour"></th>
-        <th v-for="(day, index) in days" :key="index">{{ day }}</th>
+        <th class="hour-first"></th>
+        <th class="day" v-for="(day, index) in days" :key="index">{{ day }}</th>
       </tr>
 
       <tr v-for="(hour, rowIndex) in hours" :key="rowIndex">
         <td class="hour">{{ hour }}</td>
 
 
-        <td v-for="(day, colIndex) in days" :key="colIndex">
+        <td class="appointment" v-for="(day, colIndex) in days" :key="colIndex">
           <button-calendar :date="day" :time="hour" :booked="boolGrid[rowIndex][colIndex]" @toggle-booked="handleToggle(rowIndex,colIndex)"></button-calendar>
         </td>
       </tr>
@@ -34,31 +34,60 @@ const handleToggle = (rowIndex, colIndex) => {
 
 
 <style scoped>
-.table-container{
+.table-container {
+  max-width: 904px;
+  max-height: 800px;
   margin: 30px;
-  display: flex;
-  align-items:center;
+  padding: 20px;
+  border-radius: 15px;
   background-color: rgba(210, 218, 250, 0.75);
-  border-radius:15px;
-  padding:40px;
+  overflow-y: auto;
+  overflow-x: auto;
+  @media (max-width: 768px) {
+    max-width: 300px;
+    max-height: 200px;
+  }
 }
+
 .table-calendar {
   border-collapse: collapse;
   width: 100%;
-  overflow: hidden;
-  border-radius: 5px;
-}
-th, td {
-  border: 5px solid #666D96;
-  padding:0px;
   text-align: center;
+}
 
+th,
+td {
+  border: 2px solid #666D96;
+  padding: 8px;
 }
-th {
-  border-style: none none solid none;
+
+.appointment{
+  padding:0;
 }
-.hour{
-  border:0px;
-  padding-right:30px;
+
+.hour {
+  padding-right: 20px;
+  border-left:rgba(210, 218, 250, 0.75);
+  border-top:rgba(210, 218, 250, 0.75);
+  border-bottom:rgba(210, 218, 250, 0.75);
+}
+.day{
+  border-left:rgba(210, 218, 250, 0.75);
+  border-top:rgba(210, 218, 250, 0.75);
+  border-right:rgba(210, 218, 250, 0.75);
+}
+
+.hour-first{
+  border: rgba(210, 218, 250, 0.75);
+}
+@media (max-width: 768px) {
+  .table-calendar {
+    font-size: 0.85em;
+  }
+
+  th,
+  td {
+    padding: 4px; /* Less padding for smaller screens */
+  }
 }
 </style>
