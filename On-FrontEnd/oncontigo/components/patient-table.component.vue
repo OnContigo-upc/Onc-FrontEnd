@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';  // Importa useRoute
 import { PatientsService } from '../services/patients.service.js';
-
+import ModalAlarm from '../components/modal-alarm-patient.component.vue'
 export default {
   name: 'PatientTableComponent',
   setup() {
