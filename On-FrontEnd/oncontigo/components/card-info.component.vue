@@ -12,18 +12,26 @@ const props = defineProps({
     default:''
   },
 })
+
+function formatDate(date) {
+  const d = new Date(date);
+  const day = ('0' + d.getDate()).slice(-2);
+  const month = ('0' + (d.getMonth() + 1)).slice(-2);
+  const year = d.getFullYear().toString().slice(-2);
+  return `${day}/${month}/${year}`;
+}
 </script>
 
 <template>
   <div class="card-info">
     <div class="image-container">
-      <img src="#">
+      <img src="../../src/assets/images/userplaceholder.png">
     </div>
     <pv-card class="card-description">
       <template #title>{{ name }}</template>
       <template #content>
         <p class="m-0">
-          {{ date }}
+          {{ formatDate(date)}}
         </p>
       </template>
     </pv-card>
@@ -53,9 +61,10 @@ const props = defineProps({
   display:flex;
   align-items:center;
   justify-content:center;
-}
 
+}
 img{
-
+  width:100px;
 }
+
 </style>
