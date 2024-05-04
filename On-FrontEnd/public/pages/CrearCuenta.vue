@@ -81,7 +81,7 @@ export default {
   methods: {
     onSubmit() {
       this.$emit('formSubmitted');
-      this.$router.push({ path: '/iniciar-sesion' })
+      this.$router.push({ path: '/login' })
     }
   }
 }

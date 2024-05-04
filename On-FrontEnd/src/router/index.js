@@ -17,10 +17,12 @@ const router = createRouter({
         {
             path: "/patient-overview/:idDoctor",
             component: PatientOverview,
+            name:PatientOverview
         },
         {
             path: "/calendar",
-            component: Calendar
+            component: Calendar,
+            name:Calendar
         },
         {
             path:"/header",
@@ -31,7 +33,7 @@ const router = createRouter({
             component:IniciarSesion
         },
         {
-            path:"/dashboard",
+            path:"/dashboard-doctor/:id",
             component:Dashboard
         },
     ],

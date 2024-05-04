@@ -38,6 +38,11 @@ export default {
     onCardClick(cardName) {
       // Aquí puedes manejar lo que sucede cuando se hace clic en las tarjetas
       console.log(`Has hecho clic en la tarjeta ${cardName}`);
+      if(cardName === 'Lista de pacientes'){
+        this.$router.push({ path: '/patient-overview/1' });
+      }else if(cardName === 'Calendario'){
+        this.$router.push({ path: '/calendar' });
+      }
     }
   }
 }

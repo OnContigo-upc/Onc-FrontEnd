@@ -22,7 +22,7 @@ export default {
   name: 'IniciarSesion',
   methods: {
     onSubmit() {
-      this.$router.push({ path: '/dashboard' });
+      this.$router.push({ path: '/dashboard-doctor/1' });
     }
   }
 }
