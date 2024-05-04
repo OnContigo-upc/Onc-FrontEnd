@@ -58,7 +58,7 @@ export default {
                 </div>
                 <div class="col ">
                   <div class="main-row center">
-                    <img class="roundedP-img" alt="img-avatar" src="@/assets/haikyu.jpeg"/>
+                    <img class="roundedP-img" alt="img-avatar" src=""/>
                   </div>
                   <div class="main-row chatP-button">
                     <div class="col text-right text-bold">CHAT</div>
