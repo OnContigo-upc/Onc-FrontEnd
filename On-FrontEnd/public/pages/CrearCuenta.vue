@@ -34,16 +34,7 @@
           <input type="tel" class="flex-auto input-frm" placeholder="Teléfono">
         </div>
       </div>
-      <div class="main-row text-left">
-        <div class="col">
-          <div class="text-bold">DNI:</div>
-          <input type="text" class="flex-auto input-frm" placeholder="DNI">
-        </div>
-        <div class="col">
-          <div class="text-bold ">Edad:</div>
-          <input type="number" class="flex-auto input-frm" placeholder="Edad">
-        </div>
-      </div>
+
       <div>
         <div class="main-row text-left">
           <div class="col">
@@ -129,7 +120,7 @@ export default {
 .bg-account{
   background-image:url('@/assets/images/bg-login.png') !important;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center top;
   background-attachment: fixed;
   width: 100%;

@@ -36,7 +36,8 @@ onMounted(fetchPatients,);
   display:grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
-
+  width: 100vw;
+  overflow-y: scroll;
 }
 @media (max-width: 768px) {
   .calendar-container {

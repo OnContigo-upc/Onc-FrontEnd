@@ -6,8 +6,8 @@
       <div class="text-bold" style="width:100% !important">Bienvenida, Jane Doe.</div>
       <div class="text-bold" style="width:100% !important">¡Bienvenida a tu Portal de Oncontigo!</div>
     </div>
-     <div class="main-row text-left options">
-      <div class="col text-bold">
+     <div class="main-col text-left options md:flex md:max-w-768">
+      <div class="col text-bold items-center">
         <div class="card" @click="onCardClick('Lista de pacientes')">
           <img class="option-img" alt="patient-list-img" src="@/assets/images/patient-list.png"/>
           <div class="text-shape">
