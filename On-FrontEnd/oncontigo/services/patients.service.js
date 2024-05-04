@@ -8,4 +8,7 @@ export class PatientsService{
     getById(id){
         return http.get(`/patients/${id}`);
     }
+    getByIdDoctor(idDoctor){
+        return http.get(`/patients?idDoctor=${idDoctor}`);
+    }
 }

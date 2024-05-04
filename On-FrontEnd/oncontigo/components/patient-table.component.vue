@@ -1,38 +1,21 @@
 <script>
+import {PatientsService} from "../services/patients.service.js";
+import {onMounted, ref} from "vue";
 
-export default {
-  data() {
-    return {
-      patients: [
-        { photoUrl: '../../../public/img/vite.svg', dni: '13423432', name: 'John Doe', lastAppointment: 'dd/mm/yy', nextAppointment: 'dd/mm/yy', alarm: true },
-        { photoUrl: '../../../public/img/vite.svg', dni: '13452232', name: 'Raul', lastAppointment: 'dd/mm/yy', nextAppointment: 'dd/mm/yy', alarm: false },
-        { photoUrl: '../../../public/img/vite.svg', dni: '13431662', name: 'Corsario', lastAppointment: 'dd/mm/yy', nextAppointment: 'dd/mm/yy', alarm: false },
-        { photoUrl: '../../../public/img/vite.svg', dni: '13642632', name: 'Flores', lastAppointment: 'dd/mm/yy', nextAppointment: 'dd/mm/yy', alarm: false },
-        { photoUrl: '../../../public/img/vite.svg', dni: '13975622', name: 'Mangito', lastAppointment: 'dd/mm/yy', nextAppointment: 'dd/mm/yy', alarm: false }
+const patients = ref([]);
 
-      ]
-    };
-  },
-  methods: {
-    confirm(patient) {
-      this.$confirm.require({
-        message: '¿Desea ver más detalles sobre este paciente?',
-        header: 'Confirmación',
-        icon: 'pi pi-info-circle',
-        accept: () => {
-          this.showDetails(patient);
-        },
-        reject: () => {
-
-        }
-      });
-    },
-    showDetails(patient) {
-      console.log('Detalles del paciente:', patient);
-
-    }
+const fetchPatients = async () => {
+  try {
+    const response = await new PatientsService().getByIdDoctor(1); // Filtrar por idDoctor igual a 1
+    patients.value.push(...response.data);
+    console.log(response.data);
+  } catch (error) {
+    console.error('Error pacientes', error);
   }
-};
+}
+onMounted(fetchPatients);
+
+
 </script>
 
 <template>

@@ -65,6 +65,6 @@ export default {
 }
 
 body {
-  background-color: var(--black);
+  background-color: var(--primary-pink);
 }
 </style>

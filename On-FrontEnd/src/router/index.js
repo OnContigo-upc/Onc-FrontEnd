@@ -13,7 +13,7 @@ const router = createRouter({
 
         },
         {
-            path: "/patient-overview",
+            path: "/patient-overview/:id",
             component: PatientOverview,
         },
         {
