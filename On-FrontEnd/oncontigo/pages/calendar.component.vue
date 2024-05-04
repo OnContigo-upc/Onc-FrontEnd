@@ -1,5 +1,5 @@
 <script setup>
-import {onMounted, ref} from "vue";
+import {onMounted, ref,computed} from "vue";
 import CalendarAppointments from "../components/calendar-appointments.component.vue";
 import CalendarDisplay from "../components/calendar-display.component.vue";
 import {PatientsService} from "../services/patients.service.js";
@@ -14,7 +14,7 @@ const fetchPatients=async ()=>{
   }
 }
 
-onMounted(fetchPatients);
+onMounted(fetchPatients,);
 </script>
 
 <!--Esta es una page del calendario-->
