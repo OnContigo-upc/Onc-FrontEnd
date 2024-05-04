@@ -6,9 +6,9 @@
     <h1>Iniciar sesión</h1>
     <form @submit.prevent="onSubmit" class="login-frm">
       <div class="text-bold text-left vertical-space">Email:</div>
-      <input type="email" placeholder="Email" class="flex-auto vertical-space" autocomplete="off">
+      <input type="email" v-model="email" placeholder="Email" class="flex-auto vertical-space" autocomplete="off">
       <div class="text-bold text-left vertical-space">Contraseña:</div>
-      <input type="password" placeholder="Contraseña" class="vertical-space flex-auto" autocomplete="off">
+      <input type="password" v-model="password" placeholder="Contraseña" class="vertical-space flex-auto" autocomplete="off">
       <button class="button-login login-frm" type="submit" @click="onSubmit" >Iniciar sesión</button>
     </form>
   </div>
@@ -16,17 +16,37 @@
   </transition>
 
 </template>
-
 <script>
+import { PatientsService } from "../services/doctor.service.js";
+
 export default {
   name: 'IniciarSesion',
+  data() {
+    return {
+      email: '',
+      password: '',
+      patientService: new PatientsService()
+    };
+  },
   methods: {
-    onSubmit() {
-      this.$router.push({ path: '/dashboard-doctor/1' });
+    async onSubmit() {
+      try {
+        const doctors = await this.patientService.getAllDoctors();
+        const matchingDoctor = doctors.data.find(doctor => doctor.email === this.email && doctor.password === this.password);
+        if (matchingDoctor) {
+          this.$router.push({ path: `/dashboard-doctor/${matchingDoctor.idDoctor}` });
+        } else {
+          alert('Credenciales inválidas');
+        }
+      } catch (error) {
+        console.error('Error fetching doctors:', error);
+        alert('Error al verificar las credenciales');
+      }
     }
   }
 }
 </script>
+
 
 <style scoped>
 .text-bold{

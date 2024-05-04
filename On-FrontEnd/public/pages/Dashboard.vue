@@ -32,21 +32,26 @@
 </template>
 
 <script>
+import { PatientsService } from "../services/doctor.service.js";
+
 export default {
   name: 'Dashboard',
   methods: {
     onCardClick(cardName) {
-      // Aquí puedes manejar lo que sucede cuando se hace clic en las tarjetas
       console.log(`Has hecho clic en la tarjeta ${cardName}`);
-      if(cardName === 'Lista de pacientes'){
-        this.$router.push({ path: '/patient-overview/1' });
-      }else if(cardName === 'Calendario'){
+      const doctorId = this.$route.params.id;  // Accediendo al ID del doctor desde la URL
+
+      if (cardName === 'Lista de pacientes') {
+        // Navegar a la vista de descripción general de los pacientes del mismo doctor
+        this.$router.push({ path: `/patient-overview/${doctorId}` });
+      } else if (cardName === 'Calendario') {
         this.$router.push({ path: '/calendar' });
       }
     }
   }
 }
 </script>
+
 
 <style scoped>
 .text-bold{
