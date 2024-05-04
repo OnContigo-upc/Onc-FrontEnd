@@ -38,7 +38,7 @@ export default {
     <pv-data-table :value="patients" dataKey="dni">
       <pv-column header="Foto">
         <template #body="slotProps">
-          <img :src="slotProps.data.photoUrl" alt="Foto de Paciente" style="width: 40px; height: auto;">
+          <img  src="../../src/assets/images/userplaceholder.png" alt="Foto de Paciente" style="width: 40px; height: auto;">
         </template>
       </pv-column>
       <pv-column field="dni" header="DNI"></pv-column>
