@@ -11,7 +11,7 @@
       </div>
       <div class="main-row text-left">
         <div class="col">
-        <input type="text" class="flex-auto input-frm" placeholder="Nombre" >
+        <input type="text" class="flex-auto input-frm" style="width:100% !important" placeholder="Nombre" >
       </div>
       </div>
       <div class="main-row text-left">
