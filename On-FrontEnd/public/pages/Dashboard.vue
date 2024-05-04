@@ -94,6 +94,6 @@ export default {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  cursor: pointer; /* Esto hace que el cursor cambie a una mano cuando se pasa por encima de las tarjetas */
+  cursor: pointer; /* Esto hace que el cursor cambie a una mano cuando se pasa por encima de las tarjetas   */
 }
 </style>
