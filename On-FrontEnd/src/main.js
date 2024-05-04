@@ -2,12 +2,29 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 
+
 import PrimeVue from 'primevue/config';
 import 'primeflex/primeflex.css';
 
 import 'primevue/resources/themes/md-light-indigo/theme.css';
 import 'primevue/resources/primevue.min.css';
 import 'primeicons/primeicons.css';
+
+import 'primeflex/primeflex.css';
+
+
+import Menubar from "primevue/menubar";
+
+import Steps from 'primevue/steps';
+
+import Dialog from 'primevue/dialog';
+import Dropdown from "primevue/dropdown";
+import InputText from 'primevue/inputtext';
+import Calendar from "primevue/calendar";
+import ConfirmDialog from 'primevue/confirmdialog';
+import ConfirmationService from 'primevue/confirmationservice';
+//Router
+import router from "@/router";
 import AutoComplete from "primevue/autocomplete";
 
 import Card             from 'primevue/card';
@@ -38,5 +55,20 @@ createApp(App)
     .component('pv-row',Row)
     .component('pv-column',Column)
     .component('pv-autocomplete', AutoComplete)
+    .component('pv-select-button', SelectButton)
+    .component('pv-sidebar', Sidebar)
+    .component('pv-avatar', Avatar)
+    .component('pv-menu', Menu)
+    .component('pv-menubar', Menubar)
+    .component('pv-toolbar', Toolbar)
+    .component('pv-steps', Steps)
+    .component('pv-dropdown', Dropdown)
+    .component('pv-column', Column)
+    .component('pv-data-table', DataTable)
+    .component('pv-dialog', Dialog)
+    .component('pv-input-text', InputText)
+    .component('pv-calendar', Calendar)
+    .component('pv-confirm-dialog', ConfirmDialog)
+    .use(router)
+    .use(ConfirmationService)
     .mount('#app')
-
