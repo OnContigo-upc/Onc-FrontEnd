@@ -135,6 +135,62 @@
       "idDoctor": "a5531273-2956-4b04-ab2b-7df4dd06e0df",
       "id": "15"
     }
+  ],
+  "doctors": [
+    {
+      "email": "Raegan52@example.org",
+      "password": "tHxlBiiQj3R7i9F",
+      "name": "Angel Boyer",
+      "idDoctor": "1"
+    },
+    {
+      "email": "Chaim13@example.org",
+      "password": "dVzjKyMXqvsJNpw",
+      "name": "Claude Jakubowski I",
+      "idDoctor": "2"
+    },
+    {
+      "email": "Shania84@example.com",
+      "password": "dGcE3O9kNRT4Yxm",
+      "name": "Brenda Littel",
+      "idDoctor": "3"
+    },
+    {
+      "email": "August84@example.com",
+      "password": "_bvO2WpjMHWRZHb",
+      "name": "Tara Watsica",
+      "idDoctor": "4"
+    },
+    {
+      "email": "Samantha.Schaefer@example.com",
+      "password": "5oqX2MuZmyXBJis",
+      "name": "Rodney Botsford",
+      "idDoctor": "5"
+    },
+    {
+      "email": "Alec56@example.net",
+      "password": "JCUDjoOAwMK2d8W",
+      "name": "Dr. Dianne Sipes",
+      "idDoctor": "6"
+    },
+    {
+      "email": "Ciara.Barton@example.com",
+      "password": "9KnZCSsEIgbVHN7",
+      "name": "Luke Hudson",
+      "idDoctor": "7"
+    },
+    {
+      "email": "Corene.Rice@example.net",
+      "password": "A_p_L1WzMOwo8_O",
+      "name": "Javier Muller",
+      "idDoctor": "8"
+    },
+    {
+      "email": "Eric_Hickle31@example.net",
+      "password": "AFIDv0UKsZCIqfY",
+      "name": "Alice Lubowitz",
+      "idDoctor": "9"
+    }
   ]
 
 }

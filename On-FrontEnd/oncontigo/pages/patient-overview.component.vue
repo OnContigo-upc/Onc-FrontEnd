@@ -1,15 +1,52 @@
 <script>
 import PatientTable from '../components/patient-table.component.vue'
 import PatientAction from '../components/patient-action.component.vue'
+import ModalAddPatient from "../components/modal-add-patient.component.vue";
+import ModalAllPatient from "../components/modal-alarm-patient.component.vue";
+import ModalDeletePatient from "../components/modal-delete-patient.component.vue";
+import ModalPatient from "../components/modal-patient.component.vue";
+import ModalDoctor from "../components/modal-doctor.component.vue";
+
 import {onMounted} from "vue";
 
 export default {
   name: "App",
-  components: {PatientTable,PatientAction},
+  components: {PatientTable,PatientAction,ModalAddPatient,ModalAllPatient,ModalDeletePatient, ModalDoctor,ModalPatient},
+  props:{
+    showModalD:Boolean,
+    showModalP:Boolean,
+    showModalDeleteP:Boolean,
+    showModalAddP:Boolean,
+    showModalAlarmP:Boolean,
+  },
+  data(){return {
+    showModalD:false,
+    showModalP:false,
+    showModalDeleteP:false,
+    showModalAddP:false,
+    showModalAlarmP:false
+  }},
   setup() {
     onMounted(() => {
       document.cookie = 'locale=en';
     });
+  },
+  methods:{
+    showModalDoctor(){
+      this.showModalD= !this.showModalD;
+    },
+    showModalPatient(){
+      this.showModalP= !this.showModalP;
+    },
+    showModalDeletePatient(){
+      this.showModalDeleteP= !this.showModalDeleteP;
+    },
+    showModalAddPatient(){
+      this.showModalAddP= !this.showModalAddP;
+    },
+    showModalAlarmPatient(){
+      this.showModalAlarmP= !this.showModalAlarmP;
+    },
   }
 };
 </script>
@@ -20,12 +57,16 @@ export default {
       <patient-table></patient-table>
     </div>
     <div class="action-section">
-      <patient-action :action="agregarPaciente">Agregar Paciente</patient-action>
-      <patient-action :action="verDetalles">Ver Detalles</patient-action>
-      <patient-action :action="recetarMedicamento">Recetar Medicamento</patient-action>
-      <patient-action :action="manejarTratamientos">Tratamientos y Procedimientos</patient-action>
-      <patient-action :action="eliminarPaciente">Eliminar Paciente</patient-action>
+      <patient-action @click="showModalAddPatient">Agregar Paciente</patient-action>
+      <patient-action  @click="showModalPatient">Ver Detalles</patient-action>
+      <patient-action  @click="showModalAddPatient">Recetar Medicamento</patient-action>
+      <patient-action  @click="showModalAddPatient">Tratamientos y Procedimientos</patient-action>
+      <patient-action  @click="showModalDeletePatient">Eliminar Paciente</patient-action>
     </div>
+
+    <modal-add-patient v-if="showModalAddP" @close="showModalAddP = false"></modal-add-patient>
+    <modal-delete-patient v-if="showModalDeleteP" @close="showModalDeleteP = false"></modal-delete-patient>
+    <modal-patient v-if="showModalP" @close="showModalP = false"></modal-patient>
   </div>
 </template>
 
