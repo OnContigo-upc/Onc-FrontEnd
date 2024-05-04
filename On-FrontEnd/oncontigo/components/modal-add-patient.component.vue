@@ -21,7 +21,7 @@ export default {
 
           <div class="modal-body">
             <slot name="body  text-left">
-                    <div class="text-bold text-left">Ingrese el DNI del paiente:</div>
+                    <div class="text-bold text-left">Ingrese el DNI del paciente:</div>
                     <div class="dni-input text-left"><input  class="flex-auto" autocomplete="off" ></div>
             </slot>
           </div>
