@@ -73,7 +73,9 @@ export default {
   margin-top: 8%;
   border-radius: 15px !important;
   border-radius: 2px;
-
+  @media (max-width: 768px) {
+    width: 90vw;
+  }
 }
 .bg-login{
   background-image:url('@/assets/images/bg-login.png') !important;
@@ -115,4 +117,5 @@ form {
   display: flex;
   flex-direction: column;
 }
+
 </style>
