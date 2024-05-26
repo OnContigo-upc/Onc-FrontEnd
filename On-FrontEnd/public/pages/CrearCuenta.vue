@@ -17,7 +17,7 @@
       <div class="main-row text-left">
         <div class="col">
           <div class="text-bold">Contraseña:</div>
-          <input type="password" class="flex-auto vertical-space input-frm" placeholder="Contraseña">
+          <input type="password" class="flex-auto vertical-space input-frm password-input" placeholder="Contraseña">
         </div>
         <div class="col">
           <div class="text-bold">Confirmar contraseña:</div>
@@ -47,8 +47,8 @@
           </div>
         </div>
         <div class="main-row text-left ">
-          <div class="col center text-left">
-            <input type="radio" id="paciente" name="role" style="margin-left:70%">
+          <div class="col center text-left patient-field">
+            <input type="radio" class="patient-field" id="paciente" name="role" style="">
             <label for="paciente">Paciente</label>
           </div>
           <div class="col center">
@@ -79,6 +79,20 @@ export default {
 </script>
 
 <style scoped>
+.patient-field{
+margin-left:70%;
+@media (max-width: 768px) {
+  margin-left:50%;
+}
+  @media (max-width: 344px) {
+    margin-left:40%;
+  }
+}
+.password-input{
+  @media (max-width: 768px) {
+    margin-top:25px !important;
+  }
+}
 .main-row{
   display:flex;
 }
@@ -116,6 +130,9 @@ export default {
   margin-top: 2%;
   border-radius: 15px !important;
   border-radius: 2px;
+  @media (max-width: 768px) {
+    width: 90vw;
+  }
 }
 .bg-account{
   background-image:url('@/assets/images/bg-login.png') !important;
@@ -139,6 +156,9 @@ export default {
   border-radius: 5px;
   box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
   text-indent: 5px;
+  @media (max-width: 768px) {
+    width: 95%;
+  }
 }
 .button-account {
   background-color: #FF94B0;
