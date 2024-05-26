@@ -71,11 +71,11 @@ export default {
 </template>
 
 <style>
-.container {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-}
+ .container {
+   display: flex;
+   flex-direction: row;
+   height: 100vh;
+ }
 
 .table-section {
   flex: 2;
@@ -87,9 +87,36 @@ export default {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  /*centrar el boton verticalmente*/
+  align-items: center;
+
 }
 
-.patient-action {
-  margin-bottom: 10px;
+
+
+@media screen and (max-width: 1280px) {
+
+  .container {
+    flex-direction: column;
+  }
+  .action-section {
+    order:-1;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
+ @media screen and (max-width: 540px) {
+
+   .container {
+     flex-direction: column;
+   }
+   .action-section {
+     order:-1;
+     flex-direction:column;
+     justify-content: center;
+   }
+ }
+
+
 </style>
