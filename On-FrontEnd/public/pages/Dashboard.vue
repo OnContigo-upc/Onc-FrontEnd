@@ -6,25 +6,32 @@
       <div class="text-bold" style="width:100% !important">Bienvenido</div>
       <div class="text-bold" style="width:100% !important">¡Bienvenida a tu Portal de Oncontigo!</div>
     </div>
-     <div class="main-col text-left options md:flex md:max-w-768">
+    <div class="main-col text-left options md:flex md:max-w-768">
       <div class="col text-bold items-center">
-        <div class="card" @click="onCardClick('Lista de pacientes')">
-          <img class="option-img" alt="patient-list-img" src="@/assets/images/patient-list.png"/>
-          <div class="text-shape">
-            <h2  class="text-center text-bold">LISTA PACIENTES</h2>
-          </div>
-      </div>
+        <pv-card class="card" @click="onCardClick('Lista de pacientes')">
+          <template #header>
+            <img class="option-img" alt="patient-list-img" src="@/assets/images/patient-list.png" />
+          </template>
+          <template #content>
+            <div class="text-shape">
+              <h2 class="text-center text-bold">LISTA PACIENTES</h2>
+            </div>
+          </template>
+        </pv-card>
       </div>
       <div class="col">
-        <div class="card" @click="onCardClick('Calendario')">
-          <img class="option-img" alt="calendar-img" src="@/assets/images/calendar.png"/>
-          <div class="text-shape">
-            <h2 class="text-center text-bold">CALENDARIO</h2>
-          </div>
-        </div>
+        <pv-card class="card" @click="onCardClick('Calendario')">
+          <template #header>
+            <img class="option-img" alt="calendar-img" src="@/assets/images/calendar.png" />
+          </template>
+          <template #content>
+            <div class="text-shape">
+              <h2 class="text-center text-bold">CALENDARIO</h2>
+            </div>
+          </template>
+        </pv-card>
       </div>
     </div>
-
 
   </div>
   </transition>
@@ -54,51 +61,94 @@ export default {
 
 
 <style scoped>
-.text-bold{
-  font-weight:bold;
+.text-bold {
+  font-weight: bold;
 }
-.text-left{
+
+.text-left {
   text-align: left;
 }
-.text-center{
+
+.text-center {
   text-align: center;
 }
-.text-shape{
+
+.text-shape {
   background-color: #95A8FF;
   height: 60px;
-  padding-top: 1px;
-  padding-bottom: 41px;
+  padding: 1px 0 41px;
   width: 250px;
   border: 1px solid #666D96;
+  display: flex;
+  justify-content: center;
 }
-.main-row{
-  display:flex;
+
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin: 10px 0;
 }
-.col{
-  flex-grow:1;
-  margin:0px 2px;
-}
+
 .option-img {
   height: 300px;
   width: 250px;
 }
+
 .dashboard {
-  margin-left:2%;
+  margin-left: 2%;
 }
-.dashboard-title{
-  margin-top:20px;
+
+.dashboard-title {
+  margin-top: 20px;
 }
-.options{
-  margin: 0 auto;
-  margin-top:10%;
-  width:600px;
+
+.options {
+  margin: 10% auto 0;
+  width: 600px;
 }
+
 .card {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  cursor: pointer; /* Esto hace que el cursor cambie a una mano cuando se pasa por encima de las tarjetas   */
+  cursor: pointer;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .card img {
+    display: none;
+  }
+
+  .card {
+    width: min-content;
+  }
+}
+
+@media (max-width: 600px) {
+  .card .text-shape {
+    font-size: 12px;
+    width: min-content;
+  }
+
+  .col {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 }
 </style>
