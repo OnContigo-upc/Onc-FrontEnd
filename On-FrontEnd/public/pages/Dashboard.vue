@@ -3,7 +3,7 @@
 
   <div class="dashboard">
     <div class="dashboard-title">
-      <div class="text-bold" style="width:100% !important">Bienvenida, Jane Doe.</div>
+      <div class="text-bold" style="width:100% !important">Bienvenido</div>
       <div class="text-bold" style="width:100% !important">¡Bienvenida a tu Portal de Oncontigo!</div>
     </div>
      <div class="main-col text-left options md:flex md:max-w-768">
