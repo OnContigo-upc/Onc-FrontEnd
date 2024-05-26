@@ -58,7 +58,7 @@ export default {
                 </div>
                 <div class="col ">
                   <div class="main-row center">
-                    <img class="roundedP-img" alt="img-avatar" src=""/>
+                    <img class="roundedP-img" alt="img-avatar" src="../../src/assets/images/userplaceholder.png"/>
                   </div>
                   <div class="main-row chatP-button">
                     <div class="col text-right text-bold">CHAT</div>
