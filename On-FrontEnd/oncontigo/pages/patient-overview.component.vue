@@ -19,8 +19,17 @@ export default {
     showModalP:Boolean,
     showModalDeleteP:Boolean,
     showModalAddP:Boolean,
-    showModalAlarmP:Boolean
+    showModalAlarmP:Boolean,
+    showModalMedicineP:Boolean
   },
+  data(){return {
+    showModalD:false,
+    showModalP:false,
+    showModalDeleteP:false,
+    showModalAddP:false,
+    showModalAlarmP:false,
+    showModalMedicineP:false
+  }},
   setup() {
     onMounted(() => {
       document.cookie = 'locale=en';
@@ -42,8 +51,8 @@ export default {
     showModalAlarmPatient() {
       this.showModalAlarmP = !this.showModalAlarmP;
     },
-    showModalMedicamentoPatient() {
-      this.showModalMedicamentoP = !this.showModalMedicamentoP;
+    showModalMedicinePatient() {
+      this.showModalMedicineP = !this.showModalMedicineP;
     }
   }
 };
@@ -56,9 +65,9 @@ export default {
     </div>
     <div class="action-section">
 
-      <pv-button class="button-style" @click="showModalAddPatient">Agregar Paciente {{idDoctor}}</pv-button>
+      <pv-button class="button-style" @click="showModalAddPatient">Agregar Paciente</pv-button>
       <pv-button class="button-style" @click="showModalPatient">Ver Detalles</pv-button>
-      <pv-button class="button-style" @click="showModalAddPatient">Recetar Medicamento</pv-button>
+      <pv-button class="button-style" @click="showModalMedicinePatient">Recetar Medicamento</pv-button>
       <pv-button class="button-style" @click="showModalAddPatient">Tratamientos y Procedimientos</pv-button>
       <pv-button class="button-style" @click="showModalDeletePatient">Eliminar Paciente</pv-button>
 
@@ -67,7 +76,7 @@ export default {
     <modal-add-patient v-if="showModalAddP" @close="showModalAddP = false"></modal-add-patient>
     <modal-delete-patient v-if="showModalDeleteP" @close="showModalDeleteP = false"></modal-delete-patient>
     <modal-patient v-if="showModalP" @close="showModalP = false"></modal-patient>
-    <modal-medicamento v-if="showModalMedicamentoP" @close="showModalMedicamentoP = false"></modal-medicamento>
+    <modal-medicamento v-if="showModalMedicineP" @close="showModalMedicineP = false"></modal-medicamento>
   </div>
 </template>
 
