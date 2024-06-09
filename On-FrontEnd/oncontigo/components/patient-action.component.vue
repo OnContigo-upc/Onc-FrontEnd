@@ -2,7 +2,7 @@
 <template>
   <div>
     <pv-button class="button-style " @click="handleClick">
-      <slot></slot> <!-- Permite personalizar el contenido del botón -->
+      <slot></slot>
     </pv-button>
   </div>
 </template>

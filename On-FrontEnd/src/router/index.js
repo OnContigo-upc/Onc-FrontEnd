@@ -5,7 +5,7 @@ import CrearCuenta from "../../public/pages/CrearCuenta.vue"
 import Header from '../../public/components/Header.vue'
 import IniciarSesion from "../../public/pages/IniciarSesion.vue";
 import Dashboard from "../../public/pages/Dashboard.vue";
-
+import LandingPage from "../../oncontigo/pages/landing-page.component.vue";
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
@@ -17,7 +17,9 @@ const router = createRouter({
         {
             path: "/patient-overview/:idDoctor",
             component: PatientOverview,
-            name:PatientOverview
+            name:PatientOverview,
+            //ocultar el header
+
         },
         {
             path: "/calendar",
@@ -36,6 +38,13 @@ const router = createRouter({
             path:"/dashboard-doctor/:id",
             component:Dashboard
         },
+        {
+            path:"/landing-page",
+            component:LandingPage,
+            meta: {
+                hideHeader: true,
+            }
+        }
     ],
 });
 
