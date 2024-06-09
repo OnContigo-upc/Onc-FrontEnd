@@ -10,15 +10,22 @@ const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
-          path: "",
-          component:CrearCuenta
+            path:"",
+            component:LandingPage,
+            meta: {
+                hideHeader: true,
+            }
+        },
+        {
+            path: "/crear-cuenta",
+            component:CrearCuenta
 
         },
+
         {
             path: "/patient-overview/:idDoctor",
             component: PatientOverview,
             name:PatientOverview,
-            //ocultar el header
 
         },
         {
@@ -37,13 +44,6 @@ const router = createRouter({
         {
             path:"/dashboard-doctor/:id",
             component:Dashboard
-        },
-        {
-            path:"/landing-page",
-            component:LandingPage,
-            meta: {
-                hideHeader: true,
-            }
         }
     ],
 });

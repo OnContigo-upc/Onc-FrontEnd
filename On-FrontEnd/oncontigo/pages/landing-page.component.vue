@@ -1,5 +1,19 @@
 <script setup>
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
+
+const goToLogin = () => {
+  router.push('/login');
+};
+
+const goToSignUp = () => {
+  router.push('/signup');
+};
+
+const switchLanguage = () => {
+  window.location.href = '';
+};
 </script>
 
 <template>
@@ -19,9 +33,9 @@
       </ul>
     </nav>
     <ul class="nav-btn">
-      <a class="btn switcher" onclick="location.href='indexES.html'"><button>EN/ES</button></a>
-      <a class="btn" onclick="location.href='https://onc-frontend-202401.web.app/'"><button>Login</button></a>
-      <a class="btn" onclick="location.href='https://onc-frontend-202401.web.app/'"><button>Sign Up</button></a>
+      <a class="btn switcher" onclick="location.href='#'"><button>EN/ES</button></a>
+      <a class="btn" @click="goToLogin"><button>Login</button></a>
+      <a class="btn" @click="goToSignUp"><button>Sign Up</button></a>
     </ul>
   </header>
   <main>
