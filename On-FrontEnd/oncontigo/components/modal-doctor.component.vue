@@ -4,24 +4,25 @@ export default {
   name:"doctor-modal",
   components: {},
   props:{
-  }
+    visible:Boolean
+  },
+  data(){
+    return{
+      visible:true
+    }
+  },
 }
 </script>
 
 <template>
-  <transition name="modalD" >
-    <div class="modal-mask">
-      <div class="modal-wrapper">
-        <div class="modalD-container">
-
-          <div class="modal-header">
-            <slot name="header">
+  <pv-dialog v-model:visible="visible" modal class="modalD-container" header="Doctor Details" :closable="false">
+    <template #header class="modalP" >
+      <div class="modal-header" >
               <label class="modalD-title">Detalles de mi Doctor</label>
-            </slot>
-          </div>
+      </div>
+    </template>
 
           <div class="modal-body">
-            <slot name="body">
               <div class="main-row ">
                 <div class="col" style="margin-top: 10%;">
                   <div class="main-row text-left">
@@ -51,22 +52,14 @@ export default {
                   </div>
                 </div>
               </div>
-            </slot>
           </div>
 
-          <div class="modal-footer">
-            <slot name="footer">
-<div>
-  <button class="modalD-button" @click="$emit('close')">
+    <template #footer >
+  <pv-button class="modalD-button center" @click="$emit('close')">
     Aceptar
-  </button>
-</div>
-            </slot>
-          </div>
-        </div>
-      </div>
-    </div>
-  </transition>
+  </pv-button>
+    </template>
+  </pv-dialog>
 </template>
 
 <style scoped>
