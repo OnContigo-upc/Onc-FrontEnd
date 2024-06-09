@@ -60,7 +60,7 @@ export default {
 <style>
 
 .table-container {
-  max-width: 60%;
+  max-width: 80%;
   margin: 0 auto;
   padding: 10px;
   display: flex;
@@ -72,7 +72,9 @@ export default {
   border-radius: 6px;
   overflow: hidden;
 }
-
+.p-datatable-responsive{
+  max-width: 100%;
+}
 .alarm-button {
   background-color: #4A547F;
   color: white;
@@ -112,12 +114,25 @@ export default {
 }
 
 @media screen and (max-width: 1280px) {
-
+  .table-container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .p-datatable-responsive{
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 700px) {
   .photo-column {
     display: none;
+  }
+  .p-datatable-responsive{
+    max-width: 100%;
+  }
+  .table-container {
+    max-width: 100%;
   }
 }
 
@@ -155,6 +170,11 @@ export default {
   .p-datatable-tbody > tr > td {
     font-size: 0.3rem;
     padding: 2px 10px;
+  }
+  .table-container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

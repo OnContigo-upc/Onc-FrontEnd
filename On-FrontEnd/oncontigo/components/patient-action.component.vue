@@ -13,11 +13,13 @@ export default {
     action: {
       type: Function,
       required: true
-    }
+    },
+    visible:false
   },
   methods: {
     handleClick() {
       this.action();
+      this.visible=!this.visible;
     }
   }
 }
@@ -41,7 +43,6 @@ export default {
 
 @media screen and (max-width: 1280px) {
   .button-style {
-    width: 100%;
     height: 60px;
     margin: 5px;
     background-color: #4A547F;
