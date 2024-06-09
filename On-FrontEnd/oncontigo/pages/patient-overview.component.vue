@@ -6,10 +6,11 @@ import ModalAllPatient from "../components/modal-alarm-patient.component.vue";
 import ModalDeletePatient from "../components/modal-delete-patient.component.vue";
 import ModalPatient from "../components/modal-patient.component.vue";
 import ModalDoctor from "../components/modal-doctor.component.vue";
-
-import {onMounted} from "vue";
+import ModalMedicamento from "../components/modal-medicamento.component.vue";
+import { onMounted } from "vue";
 
 export default {
+
   name: "App",
   components: {
     PatientTable,PatientAction,ModalAddPatient,ModalAllPatient,ModalDeletePatient, ModalDoctor,ModalPatient},
@@ -20,34 +21,30 @@ export default {
     showModalAddP:Boolean,
     showModalAlarmP:Boolean
   },
-  data(){return {
-    showModalD:false,
-    showModalP:false,
-    showModalDeleteP:false,
-    showModalAddP:false,
-    showModalAlarmP:false
-  }},
   setup() {
     onMounted(() => {
       document.cookie = 'locale=en';
     });
   },
-  methods:{
-    showModalDoctor(){
-      this.showModalD= !this.showModalD;
+  methods: {
+    showModalDoctor() {
+      this.showModalD = !this.showModalD;
     },
-    showModalPatient(){
-      this.showModalP= !this.showModalP;
+    showModalPatient() {
+      this.showModalP = !this.showModalP;
     },
-    showModalDeletePatient(){
-      this.showModalDeleteP= !this.showModalDeleteP;
+    showModalDeletePatient() {
+      this.showModalDeleteP = !this.showModalDeleteP;
     },
-    showModalAddPatient(){
-      this.showModalAddP= !this.showModalAddP;
+    showModalAddPatient() {
+      this.showModalAddP = !this.showModalAddP;
     },
-    showModalAlarmPatient(){
-      this.showModalAlarmP= !this.showModalAlarmP;
+    showModalAlarmPatient() {
+      this.showModalAlarmP = !this.showModalAlarmP;
     },
+    showModalMedicamentoPatient() {
+      this.showModalMedicamentoP = !this.showModalMedicamentoP;
+    }
   }
 };
 </script>
@@ -58,25 +55,28 @@ export default {
       <patient-table></patient-table>
     </div>
     <div class="action-section">
+
       <pv-button class="button-style" @click="showModalAddPatient">Agregar Paciente {{idDoctor}}</pv-button>
       <pv-button class="button-style" @click="showModalPatient">Ver Detalles</pv-button>
       <pv-button class="button-style" @click="showModalAddPatient">Recetar Medicamento</pv-button>
       <pv-button class="button-style" @click="showModalAddPatient">Tratamientos y Procedimientos</pv-button>
       <pv-button class="button-style" @click="showModalDeletePatient">Eliminar Paciente</pv-button>
+
     </div>
 
     <modal-add-patient v-if="showModalAddP" @close="showModalAddP = false"></modal-add-patient>
     <modal-delete-patient v-if="showModalDeleteP" @close="showModalDeleteP = false"></modal-delete-patient>
     <modal-patient v-if="showModalP" @close="showModalP = false"></modal-patient>
+    <modal-medicamento v-if="showModalMedicamentoP" @close="showModalMedicamentoP = false"></modal-medicamento>
   </div>
 </template>
 
 <style>
- .container {
-   display: flex;
-   flex-direction: row;
-   height: 100vh;
- }
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
 
 .table-section {
   flex: 2;
@@ -89,23 +89,20 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  /*centrar el boton verticalmente*/
   align-items: center;
   width:95%;
 
 }
 
-
-
 @media screen and (max-width: 1280px) {
-
   .container {
     flex-direction: column;
     width:95%;
     margin-right:-10px;
   }
+
   .action-section {
-    order:-1;
+    order: -1;
     flex-direction: row;
     justify-content: center;
 
@@ -117,6 +114,7 @@ export default {
     margin-right: 12px;
   }
 }
+
 
 
 
@@ -272,4 +270,5 @@ export default {
    -webkit-transform: scale(1.1);
    transform: scale(1.1);
  }
+
 </style>

@@ -2,34 +2,85 @@
   "patients": [
     {
       "name": "Roosevelt Crooks",
-      "dni": "e659006f-77a5-49f5-99ff-96cb2fe41d26",
+      "dni": "12345678",
       "email": "Roderick_Lesch@gmail.com",
       "nextAppoinment": "2024-06-23T03:54:31.754Z",
       "lastAppointmet": "2068-03-06T18:34:14.947Z",
       "idDoctor": "1",
-      "id": "1"
+      "id": "1",
+      "drugs": [
+        {
+          "id": "1",
+          "name": "Ibuprofeno",
+          "instructions": "Tomar 1 pastilla cada 8 horas"
+        },
+        {
+          "id": "2",
+          "name": "Paracetamol",
+          "instructions": "Tomar 1 pastilla cada 6 horas"
+        },
+        {
+          "id": "3",
+          "name": "Amoxicilina",
+          "instructions": "Tomar 1 pastilla cada 12 horas"
+        }
+      ]
     },
     {
       "name": "Marshall Wilkinson",
-      "dni": "c2953d94-9a6d-41f1-b9a8-3380750f1e90",
+      "dni": "12345678",
       "email": "Darron_Lehner@yahoo.com",
       "nextAppoinment": "2024-06-30T21:54:10.632Z",
       "lastAppointmet": "1999-01-22T16:26:29.338Z",
       "idDoctor": "1",
-      "id": "2"
+      "id": "2",
+      "drugs": [
+          {
+          "id": "4",
+          "name": "Ibuprofeno",
+          "instructions": "Tomar 1 pastilla cada 8 horas"
+          },
+          {
+          "id": "5",
+          "name": "Paracetamol",
+          "instructions": "Tomar 1 pastilla cada 6 horas"
+          },
+          {
+          "id": "6",
+          "name": "Amoxicilina",
+          "instructions": "Tomar 1 pastilla cada 12 horas"
+          }
+      ]
     },
     {
       "name": "Blanche Gutkowski",
-      "dni": "a84b8f9a-9c1c-4d4f-b4eb-965e133acd8d",
+      "dni": "12345678",
       "email": "Anastacio_McGlynn@hotmail.com",
       "nextAppoinment": "2024-06-14T12:57:01.169Z",
       "lastAppointmet": "1991-06-01T10:45:14.112Z",
       "idDoctor": "1",
-      "id": "3"
+      "id": "3",
+      "drugs": [
+          {
+          "id": "7",
+          "name": "Ibuprofeno",
+          "instructions": "Tomar 1 pastilla cada 8 horas"
+          },
+          {
+          "id": "8",
+          "name": "Paracetamol",
+          "instructions": "Tomar 1 pastilla cada 6 horas"
+          },
+          {
+          "id": "9",
+          "name": "Amoxicilina",
+          "instructions": "Tomar 1 pastilla cada 12 horas"
+          }
+      ]
     },
     {
       "name": "Moses Kautzer",
-      "dni": "b1039eab-6852-426e-b037-0efd13d9c03b",
+      "dni": "12345678",
       "email": "Uriel_Corkery@hotmail.com",
       "nextAppoinment": "2024-04-14T14:20:55.505Z",
       "lastAppointmet": "2091-08-28T10:04:50.404Z",
@@ -47,7 +98,7 @@
     },
     {
       "name": "Leon Heidenreich",
-      "dni": "ba2fd860-7fd9-4ac2-bfc2-7232214f4fb5",
+      "dni": "12345678",
       "email": "Marshall.Beatty@gmail.com",
       "nextAppoinment": "2014-10-29T18:15:34.250Z",
       "lastAppointmet": "2060-02-22T00:05:08.333Z",

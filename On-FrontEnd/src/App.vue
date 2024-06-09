@@ -1,15 +1,23 @@
 <script>
 import HeaderComponent from "../public/components/Header.vue";
 import { onMounted } from "vue";
+import {computed} from 'vue';
+import {useRoute} from 'vue-router';
 export default {
   name: "App",
   components: {HeaderComponent},
+  setup() {
+    const route = useRoute();
+    const showHeader = computed(() => !route.meta.hideHeader);
+
+    return { showHeader };
+  },
 };
 </script>
 
 <template>
   <div class="select-none">
-    <header-component></header-component>
+    <header-component v-if="showHeader"></header-component>
     <router-view></router-view>
   </div>
 
@@ -66,17 +74,19 @@ export default {
 
 body {
   background-color: var(--primary-pink);
-  background-image:url('@/assets/images/bg-login.png') !important;
+  background-image: url('@/assets/images/bg-login.png') !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
   width: 100%;
-  height: 100%;
-  position: fixed;
+  min-height: 100vh;
+  position: relative;
   z-index: 9998;
   left: 0;
-  display: table;
+  display: block;
   transition: opacity 0.3s ease;
+  overflow-y: auto;
 }
+
 </style>
