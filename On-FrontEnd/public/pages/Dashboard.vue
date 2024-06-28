@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import { PatientsService } from "../services/doctor.service.js";
+import {patientsService} from "../../oncontigo/services/patients.service.js";
 
 export default {
   name: 'Dashboard',

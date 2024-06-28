@@ -1,7 +1,7 @@
 <script setup>
 import {ref, onMounted} from 'vue';
 import {useRoute} from 'vue-router';
-import {PatientsService} from '../services/patients.service.js';
+import {patientsService} from '../services/patients.service.js';
 import {selectedPatientsService} from '../services/selected-patients.service.js';
 
 const patients = ref([]);
@@ -10,8 +10,8 @@ const route = useRoute();
 const fetchPatients = async () => {
   const idDoctor = route.params.idDoctor;
   try {
-    const service = new PatientsService();
-    const response = await service.getByIdDoctor(idDoctor);
+
+    const response = await patientsService.getByIdDoctor(idDoctor);
     patients.value = response.data;
   } catch (error) {
     console.error('Error al cargar pacientes', error);

@@ -2,12 +2,12 @@
 import {onMounted, ref,computed} from "vue";
 import CalendarAppointments from "../components/calendar-appointments.component.vue";
 import CalendarDisplay from "../components/calendar-display.component.vue";
-import {PatientsService} from "../services/patients.service.js";
+import {patientsService} from "../services/patients.service.js";
 const patients = ref([]);
 
 const fetchPatients=async ()=>{
   try {
-    const response = await new PatientsService().getAll();
+    const response = await new patientsService().getAll();
     patients.value.push(...response.data);
   } catch (error) {
     console.error('Error pacientes', error);
