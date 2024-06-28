@@ -18,7 +18,7 @@ export default {
         // Navegar a la vista de descripción general de los pacientes del mismo doctor
         this.$router.push({ path: `/patient-overview/${doctorId}` });
       } else if (op === 'Calendar') {
-        this.$router.push({ path: '/calendar' });
+        this.$router.push({ path: '/calendar2' });
       }
       else if (op === 'Doctor') {
         this.$router.push({ path: '/calendar' });
@@ -42,19 +42,29 @@ export default {
       <template #container="{ closeCallback }">
         <div class="flex flex-column h-full">
           <div class="flex align-items-center justify-content-between px-4 pt-3 flex-shrink-0">
-                        <span class="inline-flex align-items-center gap-2">
-                            <span class="font-semibold text-2xl text-primary">OnContigo</span>
-                        </span>
-            <span>
-                  <Button type="button" @click="closeCallback" icon="pi pi-times" rounded outlined class="h-2rem w-2rem modalP-button-ic ">X</Button>
-                        </span>
+            <h1  @click="visible = true">OnContigo</h1>
+
+            <span  @click="closeCallback">
+                  X     </span>
           </div>
           <div class="overflow-y-auto">
-            <ul class="op-patient" >
-              <li @click="onOptionClick('Home')">INICIO</li>
-              <li @click="onOptionClick('Home')">INFORMACIÓN</li>
-              <li @click="onOptionClick('Calendar')">CALENDARIO</li>
-              <li @click="showModalDoctor">MI DOCTOR</li>
+            <ul class="op-patient list-none p-0 m-0 overflow-hidden" >
+              <li class="patient-li" @click="onOptionClick('Home')">
+                <a class="flex items-center cursor-pointer p-3 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
+                  <span class="font-medium">INICIO</span>
+                </a>
+              </li>
+              <li class="patient-li" @click="onOptionClick('Home')">
+                <a class=" flex items-center cursor-pointer p-3 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
+                  <span class="font-medium">INFORMACIÓN</span>
+                </a></li>
+              <li class="patient-li" @click="onOptionClick('Calendar')">
+                <a class="flex items-center cursor-pointer p-3 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
+                  <span class="font-medium">CALENDARIO</span>
+                </a></li>
+              <li class="patient-li" @click="showModalDoctor"><a class="flex items-center cursor-pointer p-3 rounded-md text-surface-700 dark:text-surface-0/80 hover:bg-surface-100 dark:hover:bg-surface-700 duration-200 transition-colors">
+                <span class="font-medium">MI DOCTOR</span>
+              </a></li>
             </ul>
           </div>
         </div>
@@ -89,5 +99,8 @@ export default {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
   font-family: Helvetica, Arial, sans-serif;
+}
+.patient-li:hover {
+  box-shadow: 10px 10px 20px rgba(36, 36, 36, 0.5);
 }
 </style>

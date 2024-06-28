@@ -46,15 +46,12 @@ export default {
                   <div class="main-row center">
                   <img class="roundedD-img" alt="img-avatar" src="../../src/assets/images/userplaceholder.png"/>
                     </div>
-                  <div class="main-row chatD-button">
-                    <div class="col text-right text-bold">CHAT</div>
-                    <div class="col text-left"><i class="pi pi-comment" ></i></div>
-                  </div>
+
                 </div>
               </div>
           </div>
 
-    <template #footer >
+    <template #footer style="backgro">
   <pv-button class="modalD-button center" @click="$emit('close')">
     Aceptar
   </pv-button>
