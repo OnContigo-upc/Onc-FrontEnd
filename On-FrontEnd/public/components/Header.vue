@@ -26,7 +26,7 @@
 <script>
 import DoctorSideBar from "../../public/components/doctor-side-bar.component.vue";
 import PatientSideBar from "../../public/components/patient-side-bar.component.vue";
-import {patientsService} from "../../oncontigo/services/patients.service.js";
+import {patientsService} from "../services/patients.service.js";
 import {Patient} from "../../oncontigo/model/patient.js";
 export default {
   name: 'Header',

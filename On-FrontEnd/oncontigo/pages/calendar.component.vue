@@ -2,7 +2,7 @@
 import {onMounted, ref,computed} from "vue";
 import CalendarAppointments from "../components/calendar-appointments.component.vue";
 import CalendarDisplay from "../components/calendar-display.component.vue";
-import {patientsService} from "../services/patients.service.js";
+import {patientsService} from "../../public/services/patients.service.js";
 const patients = ref([]);
 
 const fetchPatients=async ()=>{

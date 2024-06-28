@@ -20,6 +20,10 @@ class PatientsService {
     updatePatient(id, patientData) {
         return http.put(`/patients/${id}`, patientData);
     }
+
+    deletePatient(id) {
+        return http.delete(`/patients/${id}`);
+    }
 }
 
 export const patientsService = new PatientsService();

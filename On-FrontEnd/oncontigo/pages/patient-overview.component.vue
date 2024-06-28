@@ -68,7 +68,6 @@ export default {
       <pv-button class="button-style" @click="showModalAddPatient">Agregar Paciente</pv-button>
       <pv-button class="button-style" @click="showModalPatient">Ver Detalles</pv-button>
       <pv-button class="button-style" @click="showModalMedicinePatient">Recetar Medicamento</pv-button>
-      <pv-button class="button-style" @click="showModalAddPatient">Tratamientos y Procedimientos</pv-button>
       <pv-button class="button-style" @click="showModalDeletePatient">Eliminar Paciente</pv-button>
 
     </div>

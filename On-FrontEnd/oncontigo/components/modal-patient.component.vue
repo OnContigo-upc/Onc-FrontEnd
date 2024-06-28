@@ -1,6 +1,6 @@
 <script >
 
-import {patientsService} from "../services/patients.service.js";
+import {patientsService} from "../../public/services/patients.service.js";
 import {Patient} from "../model/patient.js";
 import moment from "moment";
 

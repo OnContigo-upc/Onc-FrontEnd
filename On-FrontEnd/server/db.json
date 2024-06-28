@@ -2,10 +2,8 @@
   "patients": [
     {
       "name": "Roose",
-      "dni": "12345678",
       "email": "Rooser@yahoo.com",
       "nextAppoinment": "2024-06-30T21:54:10.632Z",
-      "lastAppointmet": "1999-01-22T16:26:29.338Z",
       "idDoctor": "1",
       "id": "1",
       "medicinesId": [
@@ -16,10 +14,8 @@
     },
     {
       "name": "Marshall Wilkinson",
-      "dni": "12345678",
       "email": "Darron_Lehner@yahoo.com",
       "nextAppoinment": "2024-06-30T21:54:10.632Z",
-      "lastAppointmet": "1999-01-22T16:26:29.338Z",
       "idDoctor": "1",
       "id": "2",
       "medicinesId": [
@@ -31,10 +27,8 @@
     },
     {
       "name": "Diego Acuna",
-      "dni": "12345678",
       "email": "Roderick_Lesch@gmail.com",
       "nextAppoinment": "2024-06-23T03:54:31.754Z",
-      "lastAppointmet": "2068-03-06T18:34:14.947Z",
       "idDoctor": "2",
       "id": "3",
       "medicinesId": [
@@ -42,6 +36,24 @@
         "8",
         "9"
       ]
+    },
+    {
+      "name": "Luis",
+      "email": "luis@gmail.com",
+      "nextAppoinment": "2024-06-23T03:54:31.754Z",
+      "idDoctor": "5",
+      "id": "4",
+      "medicinesId": [
+        "10"
+      ]
+    },
+    {
+      "name": "Pedro",
+      "email": "pedro@gmail.com",
+      "nextAppoinment": "2024-06-23T03:54:31.754Z",
+      "idDoctor": "5",
+      "id": "5",
+      "medicinesId": []
     }
   ],
   "doctors": [

@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { selectedPatientsService } from '../services/selected-patients.service.js';
 import { MedicinesService } from '../services/medicines.service.js';
-import { patientsService } from '../services/patients.service.js'; // Importa la instancia del servicio de pacientes
+import { patientsService } from '../../public/services/patients.service.js'; // Importa la instancia del servicio de pacientes
 
 const displayDialog = ref(true);
 const selectedPatients = ref(selectedPatientsService.getSelectedPatients().value);

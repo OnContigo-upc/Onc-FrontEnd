@@ -1,7 +1,7 @@
 <script >
 
 import moment from "moment/moment.js";
-import {patientsService} from "../services/patients.service.js";
+import {patientsService} from "../../public/services/patients.service.js";
 import {Patient} from "../model/patient.js";
 
 export default {
