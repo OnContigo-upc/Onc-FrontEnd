@@ -199,13 +199,24 @@ const deleteMedicine = async () => {
     </div>
   </pv-dialog>
 
-  <pv-dialog header="Editar Medicamento" v-model:visible="editDialogVisible" :modal="true" :closable="true">
+  <pv-dialog v-model:visible="editDialogVisible" :modal="true" :closable="true">
+    <template #header class="modalD" >
+      <div class="modal-header center" style="margin: 0 auto;" >
+        <label class="modalD-title">Medicamentos</label>
+      </div>
+    </template>
     <div v-if="selectedMedicine">
-      <input v-model="editMedicineName" placeholder="Medicine Name" />
-      <input v-model="editMedicineDescription" placeholder="Medicine Description" />
-      <pv-button @click="updateMedicine">Actualizar</pv-button>
+      <div class="text-bold text-left vertical-space">Medicamento:</div>
+      <input v-model="editMedicineName" class="flex-auto vertical-space input-medicine" autocomplete="off" />
+      <div class="text-bold text-left vertical-space">Intrucciones:</div>
+      <input v-model="editMedicineDescription" class="flex-auto vertical-space input-medicine" autocomplete="off" />
+      <div  class="flex-auto vertical-space btn-act">
+
+      <pv-button class="btn-act" @click="updateMedicine">Actualizar</pv-button>
+      <pv-button @click="hideEditDialog">Close</pv-button>
+
     </div>
-    <pv-button @click="hideEditDialog">Close</pv-button>
+    </div>
   </pv-dialog>
 </template>
 
