@@ -168,7 +168,7 @@ const deleteMedicine = async () => {
       <pv-data-table :value="getMedicineDetails(patient.medicinesId)"  dataKey="id" class="p-datatable-responsive">
         <pv-column header="" class="select-column">
           <template #body="slotProps">
-            <input type="radio" v-model="selectedMedicine" :value="id" name="medicineSelection" />
+            <input type="radio" v-model="selectedMedicine" :value="slotProps.data" name="medicineSelection" />
           </template>
         </pv-column>
         <pv-column field="medicineName" header="Medicamento" class="medicine-column"></pv-column>
