@@ -1,6 +1,6 @@
 <script >
 
-import {PatientsService} from "../services/patients.service.js";
+import {patientsService} from "../services/patients.service.js";
 import {Patient} from "../model/patient.js";
 import moment from "moment";
 
@@ -13,13 +13,12 @@ export default {
   data(){
     return{
       visible:true,
-      patientsApi: new PatientsService(),
       patient: new Patient()
     }
   },
   created() {
 
-    this.patientsApi.getById(1)
+    patientsService.getById(1)
         .then(response =>{
           this.patient = response.data;
           this.patient.lastAppointmet = moment(this.patient.lastAppointmet).format('DD/MM/YY')

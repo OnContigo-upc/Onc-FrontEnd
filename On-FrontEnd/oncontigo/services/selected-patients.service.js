@@ -1,4 +1,4 @@
-// src/services/SelectedPatientsService.js
+// src/services/selectedPatientsService.js
 import { ref } from 'vue';
 
 class SelectedPatientsService {

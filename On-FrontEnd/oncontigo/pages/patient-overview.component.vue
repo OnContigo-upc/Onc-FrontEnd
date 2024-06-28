@@ -13,7 +13,7 @@ export default {
 
   name: "App",
   components: {
-    PatientTable,PatientAction,ModalAddPatient,ModalAllPatient,ModalDeletePatient, ModalDoctor,ModalPatient},
+    PatientTable,PatientAction,ModalAddPatient,ModalAllPatient,ModalDeletePatient, ModalDoctor,ModalPatient,ModalMedicamento},
   props:{
     showModalD:Boolean,
     showModalP:Boolean,

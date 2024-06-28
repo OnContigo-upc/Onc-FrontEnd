@@ -1,12 +1,13 @@
 <template>
   <pv-toolbar style="background-color: #FF94B0;">
-      <template #start>
-        <doctor-side-bar v-if="isDoctor"></doctor-side-bar>
-        <patient-side-bar v-if="isPatient"></patient-side-bar>
-      </template>
+     <template #start>
+       <!--
+       <doctor-side-bar v-if="isDoctor"></doctor-side-bar>
+       <patient-side-bar v-if="isPatient"></patient-side-bar>
+        -->
+     </template>
       <template #end>
         <nav>
-
           <ul>
             <li><a href="/">Inicio</a></li>
             <li><a href="/acerca">Acerca</a></li>
@@ -20,7 +21,7 @@
 <script>
 import DoctorSideBar from "../../public/components/doctor-side-bar.component.vue";
 import PatientSideBar from "../../public/components/patient-side-bar.component.vue";
-import {PatientsService} from "../../oncontigo/services/patients.service.js";
+import {patientsService} from "../../oncontigo/services/patients.service.js";
 import {Patient} from "../../oncontigo/model/patient.js";
 export default {
   name: 'Header',

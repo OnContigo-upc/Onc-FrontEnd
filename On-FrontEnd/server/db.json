@@ -1,29 +1,17 @@
 {
   "patients": [
     {
-      "name": "Roosevelt Crooks",
+      "name": "Roose",
       "dni": "12345678",
-      "email": "Roderick_Lesch@gmail.com",
-      "nextAppoinment": "2024-06-23T03:54:31.754Z",
-      "lastAppointmet": "2068-03-06T18:34:14.947Z",
+      "email": "Rooser@yahoo.com",
+      "nextAppoinment": "2024-06-30T21:54:10.632Z",
+      "lastAppointmet": "1999-01-22T16:26:29.338Z",
       "idDoctor": "1",
       "id": "1",
-      "drugs": [
-        {
-          "id": "1",
-          "name": "Ibuprofeno",
-          "instructions": "Tomar 1 pastilla cada 8 horas"
-        },
-        {
-          "id": "2",
-          "name": "Paracetamol",
-          "instructions": "Tomar 1 pastilla cada 6 horas"
-        },
-        {
-          "id": "3",
-          "name": "Amoxicilina",
-          "instructions": "Tomar 1 pastilla cada 12 horas"
-        }
+      "medicinesId": [
+        "1",
+        "2",
+        "3"
       ]
     },
     {
@@ -34,157 +22,26 @@
       "lastAppointmet": "1999-01-22T16:26:29.338Z",
       "idDoctor": "1",
       "id": "2",
-      "drugs": [
-          {
-          "id": "4",
-          "name": "Ibuprofeno",
-          "instructions": "Tomar 1 pastilla cada 8 horas"
-          },
-          {
-          "id": "5",
-          "name": "Paracetamol",
-          "instructions": "Tomar 1 pastilla cada 6 horas"
-          },
-          {
-          "id": "6",
-          "name": "Amoxicilina",
-          "instructions": "Tomar 1 pastilla cada 12 horas"
-          }
+      "medicinesId": [
+        "4",
+        "5",
+        "6",
+        "11"
       ]
     },
     {
-      "name": "Blanche Gutkowski",
+      "name": "Diego Acuna",
       "dni": "12345678",
-      "email": "Anastacio_McGlynn@hotmail.com",
-      "nextAppoinment": "2024-06-14T12:57:01.169Z",
-      "lastAppointmet": "1991-06-01T10:45:14.112Z",
-      "idDoctor": "1",
+      "email": "Roderick_Lesch@gmail.com",
+      "nextAppoinment": "2024-06-23T03:54:31.754Z",
+      "lastAppointmet": "2068-03-06T18:34:14.947Z",
+      "idDoctor": "2",
       "id": "3",
-      "drugs": [
-          {
-          "id": "7",
-          "name": "Ibuprofeno",
-          "instructions": "Tomar 1 pastilla cada 8 horas"
-          },
-          {
-          "id": "8",
-          "name": "Paracetamol",
-          "instructions": "Tomar 1 pastilla cada 6 horas"
-          },
-          {
-          "id": "9",
-          "name": "Amoxicilina",
-          "instructions": "Tomar 1 pastilla cada 12 horas"
-          }
+      "medicinesId": [
+        "7",
+        "8",
+        "9"
       ]
-    },
-    {
-      "name": "Moses Kautzer",
-      "dni": "12345678",
-      "email": "Uriel_Corkery@hotmail.com",
-      "nextAppoinment": "2024-04-14T14:20:55.505Z",
-      "lastAppointmet": "2091-08-28T10:04:50.404Z",
-      "idDoctor": "2",
-      "id": "4"
-    },
-    {
-      "name": "Jermaine Strosin",
-      "dni": "640560d3-fbfd-41bb-828c-45035f5fa9c1",
-      "email": "Trinity_Weissnat90@yahoo.com",
-      "nextAppoinment": "2097-07-17T21:57:46.114Z",
-      "lastAppointmet": "2035-09-06T15:20:40.115Z",
-      "idDoctor": "2",
-      "id": "5"
-    },
-    {
-      "name": "Leon Heidenreich",
-      "dni": "12345678",
-      "email": "Marshall.Beatty@gmail.com",
-      "nextAppoinment": "2014-10-29T18:15:34.250Z",
-      "lastAppointmet": "2060-02-22T00:05:08.333Z",
-      "idDoctor": "5",
-      "id": "6"
-    },
-    {
-      "name": "Ms. Henry Brakus",
-      "dni": "a353be9a-2a2e-4bd4-a32c-505f4ed65059",
-      "email": "Grace44@gmail.com",
-      "nextAppoinment": "2021-09-12T13:58:09.479Z",
-      "lastAppointmet": "2077-06-27T02:27:24.365Z",
-      "idDoctor": "3",
-      "id": "7"
-    },
-    {
-      "name": "Henrietta Hermiston",
-      "dni": "45f6b227-6f8b-4d66-942b-11ea8b6ab7eb",
-      "email": "Jeremie_Roberts58@yahoo.com",
-      "nextAppoinment": "2052-04-14T05:49:57.779Z",
-      "lastAppointmet": "2029-06-03T11:17:12.360Z",
-      "idDoctor": "c878383f-a5f9-422e-bd58-dcd1bb242ded",
-      "id": "8"
-    },
-    {
-      "name": "Marshall Prohaska",
-      "dni": "76ca8752-5ded-4956-a29d-6e310ecc7a58",
-      "email": "Ayla.Romaguera@yahoo.com",
-      "nextAppoinment": "2087-05-05T06:32:45.944Z",
-      "lastAppointmet": "2072-04-01T09:34:37.222Z",
-      "idDoctor": "1",
-      "id": "9"
-    },
-    {
-      "name": "Marguerite Gorczany",
-      "dni": "7063722a-5553-494f-a00b-aa3e1ef3e413",
-      "email": "Burdette.Schumm@yahoo.com",
-      "nextAppoinment": "2024-09-16T08:29:11.600Z",
-      "lastAppointmet": "2098-05-29T09:38:01.909Z",
-      "idDoctor": "2",
-      "id": "10"
-    },
-    {
-      "name": "Evelyn Mraz",
-      "dni": "09556f51-e2e1-4cf3-bf09-a82b0d91c78f",
-      "email": "Dena93@yahoo.com",
-      "nextAppoinment": "2076-12-18T01:39:10.653Z",
-      "lastAppointmet": "2050-01-28T02:06:29.258Z",
-      "idDoctor": "3433aa18-bbb9-4b99-bbe5-ad0a4112c4f5",
-      "id": "11"
-    },
-    {
-      "name": "Rosemary Schuppe",
-      "dni": "ee874564-e415-4f5c-ba4e-73978d8f907d",
-      "email": "Coy.Marks@hotmail.com",
-      "nextAppoinment": "2049-12-03T20:00:21.720Z",
-      "lastAppointmet": "2053-03-24T17:31:00.289Z",
-      "idDoctor": "a4c51059-98bc-46f4-858a-98eb72a4e5d7",
-      "id": "12"
-    },
-    {
-      "name": "Mrs. Jacob Dooley",
-      "dni": "632e0a15-968e-44f5-9bfb-4f0ed818ee66",
-      "email": "Clemmie_Abernathy16@gmail.com",
-      "nextAppoinment": "2054-10-06T09:09:20.232Z",
-      "lastAppointmet": "2099-04-03T03:55:26.564Z",
-      "idDoctor": "fdee64cd-df84-44f7-946b-4a20d3326d80",
-      "id": "13"
-    },
-    {
-      "name": "Yvonne Kovacek",
-      "dni": "8ffae743-ee43-4480-964f-5d9e408a5221",
-      "email": "Gennaro64@yahoo.com",
-      "nextAppoinment": "2009-07-07T09:14:08.503Z",
-      "lastAppointmet": "2044-11-15T04:10:39.610Z",
-      "idDoctor": "f45a3847-8a48-4921-a088-f1702d01156c",
-      "id": "14"
-    },
-    {
-      "name": "Viola Ondricka",
-      "dni": "c7252661-de41-4981-9276-ec266198b9f2",
-      "email": "Tremaine72@gmail.com",
-      "nextAppoinment": "2021-04-24T21:30:42.083Z",
-      "lastAppointmet": "2070-10-25T05:58:38.083Z",
-      "idDoctor": "a5531273-2956-4b04-ab2b-7df4dd06e0df",
-      "id": "15"
     }
   ],
   "doctors": [
@@ -242,6 +99,52 @@
       "name": "Alice Lubowitz",
       "idDoctor": "9"
     }
+  ],
+  "medicines": [
+    {
+      "medicineName": "Ibuprofeno",
+      "medicineDescription": "Tomar 1 pastilla cada 8 horas",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "medicineName": "Paracetamol",
+      "medicineDescription": "Tomar 1 pastilla cada 6 horas"
+    },
+    {
+      "id": "3",
+      "medicineName": "Amoxicilina",
+      "medicineDescription": "Tomar 1 pastilla cada 12 horas"
+    },
+    {
+      "id": "4",
+      "medicineName": "Ibuprofeno",
+      "medicineDescription": "Tomar 1 pastilla cada 8 horas"
+    },
+    {
+      "id": "5",
+      "medicineName": "Paracetamol",
+      "medicineDescription": "Tomar 1 pastilla cada 6 horas"
+    },
+    {
+      "id": "6",
+      "medicineName": "Amoxicilina",
+      "medicineDescription": "Tomar 1 pastilla cada 12 horas"
+    },
+    {
+      "id": "7",
+      "medicineName": "Ibuprofeno",
+      "medicineDescription": "Tomar 1 pastilla cada 8 horas"
+    },
+    {
+      "id": "8",
+      "medicineName": "Paracetamol",
+      "medicineDescription": "Tomar 1 pastilla cada 6 horas"
+    },
+    {
+      "id": "9",
+      "medicineName": "Amoxicilina",
+      "medicineDescription": "Tomar 1 pastilla cada 12 horas"
+    }
   ]
-
 }
