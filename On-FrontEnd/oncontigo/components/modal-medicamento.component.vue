@@ -155,7 +155,7 @@ const deleteMedicine = async () => {
 </script>
 
 <template>
-  <pv-dialog v-model:visible="displayDialog" :modal="true" :closable="false">
+  <pv-dialog v-model:visible="displayDialog" :modal="true" :closable="false" class="modalD-container">
     <template #header class="modalD" >
       <div class="modal-header center" style="margin: 0 auto;" >
         <label class="modalD-title">Medicamentos</label>
@@ -242,5 +242,15 @@ const deleteMedicine = async () => {
   font-weight:bold;
   line-height: 10px;
   text-align: center;
+}
+.modalD-container {
+  width: 70%;
+  margin: 0px auto;
+  padding: 20px 30px;
+  border-radius: 15px !important;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
+  font-family: Helvetica, Arial, sans-serif;
 }
 </style>
