@@ -1,6 +1,6 @@
 import http from "../../shared/http-common.js";
 
-export class PatientsService{
+export class DoctorService{
     getAllDoctors(){
         return http.get(`/doctors`);
     }

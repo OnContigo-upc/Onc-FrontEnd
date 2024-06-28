@@ -1,7 +1,7 @@
 <script >
 
 import moment from "moment/moment.js";
-import {PatientsService} from "../services/patients.service.js";
+import {patientsService} from "../services/patients.service.js";
 import {Patient} from "../model/patient.js";
 
 export default {
@@ -13,13 +13,11 @@ export default {
   data(){
     return{
       visible:true,
-      patientsApi: new PatientsService(),
       patient: new Patient()
     }
   },
   created() {
-
-    this.patientsApi.getById(1)
+    patientsService.getById(1)
         .then(response =>{
           this.patient = response.data;
         })

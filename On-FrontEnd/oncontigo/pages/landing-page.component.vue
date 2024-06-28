@@ -8,7 +8,7 @@ const goToLogin = () => {
 };
 
 const goToSignUp = () => {
-  router.push('/signup');
+  router.push('/crear-cuenta');
 };
 
 const switchLanguage = () => {
@@ -267,6 +267,20 @@ const switchLanguage = () => {
         <p class="call-to-action-text">Unlock the support for your treatment today with OnContigo. Gain access to <br><br> Educational resources, practical tools, and a caring community.</p>
         <!-- Fila para el botón -->
         <button onclick="location.href='https://onc-frontend-202401.web.app/'" class="call-to-action-button">Join Now</button>
+      </div>
+    </section>
+    <section class="full-width-image-section-9">
+      <div class="square-videos">
+        <div class="video-row">
+          <div class="video-column">
+            <h3>Video About The Product</h3>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/bwhX_kuFGDw?si=RXu2XGaHD1oqd6mw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-column">
+            <h3>Video About the Team</h3>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/sHHEwFPhJ2o?si=068F9B0Ee3slhyph" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
     </section>
     <footer class="footer">
@@ -1092,7 +1106,51 @@ body {
     width: 100%;
   }
 }
+.full-width-image-section-9 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 50px 0;
+  background: url('img/image-landing-section-3.png');
+  background-size: cover;
+}
 
+.square-videos {
+  background-color: #FFDCE5;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.video-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.video-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-column h3 {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+  .video-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
 .footer {
   display: flex;
   justify-content: space-between;
