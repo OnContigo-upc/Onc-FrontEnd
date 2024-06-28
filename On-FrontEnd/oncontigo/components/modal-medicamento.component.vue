@@ -155,23 +155,48 @@ const deleteMedicine = async () => {
 </script>
 
 <template>
-  <pv-dialog header="Medicamentos" v-model:visible="displayDialog" :modal="true" :closable="false">
+  <pv-dialog v-model:visible="displayDialog" :modal="true" :closable="false">
+    <template #header class="modalD" >
+      <div class="modal-header center" style="margin: 0 auto;" >
+        <label class="modalD-title">Medicamentos</label>
+      </div>
+    </template>
+    <div class="container-medicine">
+    <div class="table-section">
     <div v-for="patient in selectedPatients" :key="patient.id">
       <p>Nombre completo: {{ patient.name }}</p>
-      <div v-for="medicine in getMedicineDetails(patient.medicinesId)" :key="medicine.id">
-        <input type="radio" v-model="selectedMedicine" :value="medicine" name="medicineSelection" />
-        <p>Nombre de la medicina: {{ medicine.medicineName }}</p>
-        <p>Descripción: {{ medicine.medicineDescription }}</p>
+      <pv-data-table :value="getMedicineDetails(patient.medicinesId)"  dataKey="id" class="p-datatable-responsive">
+        <pv-column header="" class="select-column">
+          <template #body="slotProps">
+            <input type="radio" v-model="selectedMedicine" :value="id" name="medicineSelection" />
+          </template>
+        </pv-column>
+        <pv-column field="medicineName" header="Medicamento" class="medicine-column"></pv-column>
+        <pv-column field="medicineDescription" header="Instrucciones" class="description-column"></pv-column>
+      </pv-data-table>
+      <div  class="flex-auto vertical-space ">
+      <pv-button class="btn-act" @click="editMedicine">Editar</pv-button>
+      <pv-button @click="deleteMedicine">Eliminar</pv-button>
       </div>
     </div>
-    <div>
-      <input v-model="newMedicineName" placeholder="Medicine Name" />
-      <input v-model="newMedicineDescription" placeholder="Medicine Description" />
-      <pv-button @click="addNewMedicine">Añadir</pv-button>
-      <pv-button @click="editMedicine">Editar</pv-button>
-      <pv-button @click="deleteMedicine">Eliminar</pv-button>
     </div>
-    <pv-button @click="hideDialog">Close</pv-button>
+    <div class="action-section">
+    <div>
+      <div>
+      <p>Nuevo Medicamento</p>
+      <div class="text-bold text-left vertical-space">Medicamento:</div>
+      <input v-model="newMedicineName" class="flex-auto vertical-space input-medicine" autocomplete="off" />
+      <div class="text-bold text-left vertical-space">Intrucciones:</div>
+      <input v-model="newMedicineDescription"  class="flex-auto vertical-space input-medicine" autocomplete="off" />
+      </div>
+      <div  class="flex-auto vertical-space btn-act">
+        <pv-button class="btn-act"  @click="addNewMedicine">Añadir</pv-button>
+        <pv-button @click="hideDialog">Cancelar</pv-button>
+      </div>
+
+    </div>
+    </div>
+    </div>
   </pv-dialog>
 
   <pv-dialog header="Editar Medicamento" v-model:visible="editDialogVisible" :modal="true" :closable="true">
@@ -185,4 +210,37 @@ const deleteMedicine = async () => {
 </template>
 
 <style scoped>
+.container-medicine {
+  display: flex;
+  flex-direction: row;
+  height: 50vh;
+}
+.input-medicine{
+  width: 250px;
+  height: 32px;
+  background: #fcfcfc;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+  text-indent: 5px;
+}
+.vertical-space{
+  margin-top:10px;
+}
+.btn-act{
+  margin-right:5px !important;
+}
+.modal-header h3 {
+  margin-top: 0;
+  color: #42b983;
+  margin: 0 auto;
+
+}
+.modalD-title{
+  font-family: League Spartan;
+  font-size: 25px;
+  font-weight:bold;
+  line-height: 10px;
+  text-align: center;
+}
 </style>
